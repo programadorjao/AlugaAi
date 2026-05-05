@@ -12,6 +12,12 @@ import java.time.LocalDateTime;
     private Usuario cliente;
     private Usuario dono;
 
+    public Aluguel(Produto produto, Usuario cliente, Usuario dono) {
+        this.produto = produto;
+        this.cliente = cliente;
+        this.dono = dono;
+    }
+
     public void solicitarAluguel(){
         if(produto.estaDisponivel()){
             status = "Pendente";
